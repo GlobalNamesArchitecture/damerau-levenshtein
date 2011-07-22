@@ -10,6 +10,8 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 require 'rake'
+require 'ruby-debug'; debugger
+require 'rake/extensiontask'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
@@ -17,11 +19,14 @@ Jeweler::Tasks.new do |gem|
   gem.name = "damerau-levenshtein"
   gem.homepage = "http://github.com/dimus/damerau-levenshtein"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Calculation of editing distance for 2 strings using Levenshtein or Damerau-Levenshtein algorithms}
+  gem.description = %Q{Calculation of editing distance for 2 strings using Levenshtein or Damerau-Levenshtein algorithms}
   gem.email = "dmozzherin@gmail.com"
   gem.authors = ["Dmitry Mozzherin"]
-  # dependencies defined in Gemfile
+  gem.files = FileList["[A-Z]*", "*.gemspec", "{bin,generators,lib,spec}/**/*"]
+  gem.files -= FileList['lib/**/*.bundle', 'lib/**/*.dll', 'lib/**/*.so']
+  gem.files += FileList['ext/**/*.c']
+  gem.extensions = FileList['ext/**/extconf.rb']
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -39,14 +44,9 @@ end
 require 'cucumber/rake/task'
 Cucumber::Rake::Task.new(:features)
 
-task :default => :spec
-
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "damerau-levenshtein #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+Rake::ExtensionTask.new("damerau_levenshtein_binding") do |extension|
+    extension.lib_dir = "lib"
 end
+
+Rake::Task[:spec].prerequisites << :compile
+task :default => :spec

@@ -1,5 +1,6 @@
 = damerau-levenshtein
 
+
 Description goes here.
 
 == Contributing to damerau-levenshtein
@@ -14,6 +15,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Dmitry Mozzherin. See LICENSE.txt for
+Copyright (c) 2011 Marine Biological Laboratory. See LICENSE.txt for
 further details.
 
