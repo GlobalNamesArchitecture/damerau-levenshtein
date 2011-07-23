@@ -6,8 +6,7 @@ This gem implements pure Levenshtein algorithm, Damerau modification of it (wher
 It also includes Boehmer & Rees 2008 modification of Damerau algorithm, where transposition of bigger than 1 character blocks is taken as 1 edit distance as well (Boehmer & Rees 2008).
     
     require 'damerau-levenshtein'
-    dl = DamerauLevenshtein.new
-    dl.distance('Something', 'Smoething') #returns 1
+    DamerauLevenshtein.distance('Something', 'Smoething') #returns 1
 
 Gem damerau-levenshtein is compatible with ruby versions 1.8.7 and 1.9.2 and higher
 
@@ -19,22 +18,23 @@ Gem damerau-levenshtein is compatible with ruby versions 1.8.7 and 1.9.2 and hig
     
     require 'rubygems' #not needed for ruby >= 1.9.0
     require 'damerau-levenshtein'
+    dl = DamerauLevenshtein
 
 * compare using Damerau Levenshtein algorithm
 
-    DamerauLevenshtein.distance("Something", "Smoething") #returns 1
+    dl.distance("Something", "Smoething") #returns 1
 
 * compare using Levensthein algorithm
   
-    DamerauLevenshtein.distance("Something", "Smoething", 0) #returns 2
+    dl.distance("Something", "Smoething", 0) #returns 2
 
 * compare using Boehmer & Rees modification
 
-    DamerauLevenshtein.distance("Something", "meSothing", 2) #returns 2 instead of 4
+    dl.distance("Something", "meSothing", 2) #returns 2 instead of 4
 
 * comparison of words with utf-8 characters should work fine:
 
-    DamerauLevenshtein.distance("Sjöstedt", "Sjostedt") #returns 1
+    dl.distance("Sjöstedt", "Sjostedt") #returns 1
 
 == Description
 
@@ -57,7 +57,7 @@ max_distance -- is a threshold after which algorithm gives up and returns max_di
 
 Levenshtein algorithm is expensive, so it makes sense to give up when edit distance is becoming too big. The argument max_distance does just that.
 
-    DamerauLevenshtein.distane('abcdefg', '1234567', 0, 3) #give up when edit distance exeeds 3)
+    DamerauLevenshtein.distance('abcdefg', '1234567', 0, 3) #give up when edit distance exceeds 3)
     
 == Contributing to damerau-levenshtein
  
