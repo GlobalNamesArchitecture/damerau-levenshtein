@@ -3,7 +3,7 @@
 The damerau-levenshtein gem allows to find edit distance between two UTF-8 or ASCII encoded strings with O(N**2) efficiency.
 
 This gem implements pure Levenshtein algorithm, Damerau modification of it (where 2 character transposition counts as 1 edit distance).
-It also includes Boehmer & Rees 2008 modification of Damerau algorithm, where transposition of bigger than 1 character blocks is taken as 1 edit distance as well (Boehmer & Rees 2008).
+It also includes Boehmer & Rees 2008 modification of Damerau algorithm, where transposition of bigger than 1 character blocks is taken in account as well (Boehmer & Rees 2008).
     
     require 'damerau-levenshtein'
     DamerauLevenshtein.distance('Something', 'Smoething') #returns 1
