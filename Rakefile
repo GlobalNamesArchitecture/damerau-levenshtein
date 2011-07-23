@@ -10,7 +10,6 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 require 'rake'
-require 'ruby-debug'; debugger
 require 'rake/extensiontask'
 
 require 'jeweler'
