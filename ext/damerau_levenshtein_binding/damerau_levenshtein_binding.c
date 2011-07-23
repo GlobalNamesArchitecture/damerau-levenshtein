@@ -17,9 +17,15 @@ VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VAL
   int stop_execution = 0;
   int min = 0;
   int current_distance = 0;
+  int pure_levenshtein = 0;
 
   int block_size = NUM2INT(_block_size);
   int max_distance = NUM2INT(_max_distance);
+  
+  if (block_size == 0) {
+    pure_levenshtein = 1;
+    block_size = 1;
+  }
 
   VALUE *sv = RARRAY_PTR(_s);
   VALUE *tv = RARRAY_PTR(_t);
@@ -87,7 +93,7 @@ VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VAL
         min = del;
         if (ins < min) min = ins;
         //if (i == 2 && j==2) return INT2NUM(swap2+5);
-        if (block_size > 1 && i >= block && j >= block && swap1 == 1 && swap2 == 1){
+        if (pure_levenshtein == 0 && i >= block && j >= block && swap1 == 1 && swap2 == 1){
           transp = d[(j - block * 2) * sl + i - block * 2] + cost + block -1;
           if (transp < min) min = transp;
           block = 0;

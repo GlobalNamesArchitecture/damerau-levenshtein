@@ -1,8 +1,64 @@
 = damerau-levenshtein
 
+The damerau-levenshtein gem allows to find edit distance between two UTF-8 or ASCII encoded strings with O(N**2) efficiency.
 
-Description goes here.
+This gem implements pure Levenshtein algorithm, Damerau modification of it (where 2 character transposition counts as 1 edit distance).
+It also includes Boehmer & Rees 2008 modification of Damerau algorithm, where transposition of bigger than 1 character blocks is taken as 1 edit distance as well (Boehmer & Rees 2008).
+    
+    require 'damerau-levenshtein'
+    dl = DamerauLevenshtein.new
+    dl.distance('Something', 'Smoething') #returns 1
 
+Gem damerau-levenshtein is compatible with ruby versions 1.8.7 and 1.9.2 and higher
+
+== Installation
+  
+    gem install damerau-levenshtein
+
+== Examples
+    
+    require 'rubygems' #not needed for ruby >= 1.9.0
+    require 'damerau-levenshtein'
+
+* compare using Damerau Levenshtein algorithm
+
+    DamerauLevenshtein.distance("Something", "Smoething") #returns 1
+
+* compare using Levensthein algorithm
+  
+    DamerauLevenshtein.distance("Something", "Smoething", 0) #returns 2
+
+* compare using Boehmer & Rees modification
+
+    DamerauLevenshtein.distance("Something", "meSothing", 2) #returns 2 instead of 4
+
+* comparison of words with utf-8 characters should work fine:
+
+    DamerauLevenshtein.distance("Sjöstedt", "Sjostedt") #returns 1
+
+== Description
+
+DamerauLevenshtein.distance takes 4 arguments:
+
+* string1
+* string2
+* block_size (default is 1)
+* max_distance (default is 10)
+
+block_size determines maximum number of characters in a transposition block:
+
+    block_size = 0 (transposition does not count -- it is a pure Levenshtein algorithm)
+    block_size = 1 (transposition between 2 adjustent characters -- it is pure Damerau-Levenshtein algorithm)
+    block_size = 2 (transposition between blocks as big as 2 characters -- so abcd and cdab counts as edit distance 2, not 4)
+    block_size = 3 (transposition between blocks as big as 3 characters -- so abcdef and defabc counts as edit distance 3, not 6)
+    etc.
+
+max_distance -- is a threshold after which algorithm gives up and returns max_distance instead of real edit distance.
+
+Levenshtein algorithm is expensive, so it makes sense to give up when edit distance is becoming too big. The argument max_distance does just that.
+
+    DamerauLevenshtein.distane('abcdefg', '1234567', 0, 3) #give up when edit distance exeeds 3)
+    
 == Contributing to damerau-levenshtein
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet

@@ -48,24 +48,24 @@ Potamomus|Pomatomus|10|1|2
 # 1 utf-8 substitution
 Cedarinia scabra Sjöstedt 1921|Cedarinia scabra Sjostedt 1921|10|1|1
 # transposition (Levenshtein takes it as 2 substitutions)
-Pomatomus|oPmatomus|10|1|2
-Pomatomus|oPmatomus|10|2|1
+Pomatomus|oPmatomus|10|0|2
+Pomatomus|oPmatomus|10|1|1
 # transposition (Levenshtein takes it as 2 substitutions)
-Pomatomus|Pomatomsu|10|1|2
-Pomatomus|Pomatomsu|10|2|1
+Pomatomus|Pomatomsu|10|0|2
+Pomatomus|Pomatomsu|10|1|1
 # transposition
-Pomtaomus|Pomatomus|10|1|2
-Pomtaomus|Pomatomus|10|2|1
+Pomtaomus|Pomatomus|10|0|2
+Pomtaomus|Pomatomus|10|1|1
 # transposition
-Pomatoums|Pomatomus|10|1|2
-Pomatoums|Pomatomus|10|2|1
+Pomatoums|Pomatomus|10|0|2
+Pomatoums|Pomatomus|10|1|1
 # transposition + substitution
-PoamtosusPomatomus|10|1|3
-PoamtosusPomatomus|10|2|2
+PoamtosusPomatomus|10|0|3
+PoamtosusPomatomus|10|1|2
 
 # transposition with utf-8 char
-Cedarinia scabra Sjöstedt 1921|Cedarinia scabra Söjstedt 1921|10|1|2
-Cedarinia scabra Sjöstedt 1921|Cedarinia scabra Söjstedt 1921|10|2|1
+Cedarinia scabra Sjöstedt 1921|Cedarinia scabra Söjstedt 1921|10|0|2
+Cedarinia scabra Sjöstedt 1921|Cedarinia scabra Söjstedt 1921|10|1|1
 
 #it should calculate Modified Damerau Levenshtein distance with 2 or more characters transposition (block size > 2)
 serrulatus|serratulus|10|2|2

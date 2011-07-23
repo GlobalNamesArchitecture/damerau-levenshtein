@@ -5,8 +5,8 @@ Given /^strings "([^\"]*)" and "([^\"]*)", block size "([^\"]*)", and a maximum 
   @max_distance = max_distance.to_i
 end
 
-When /^I run "([^\"]*)" instance function "([^\"]*)"$/ do |klass, meth|
-  dl = eval(klass + ".new")
+When /^I run "([^\"]*)" method "([^\"]*)"$/ do |klass, meth|
+  dl = eval(klass)
   @distance = dl.distance(@str1, @str2, @block_size, @max_distance)
 end
 
