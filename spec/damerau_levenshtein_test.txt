@@ -28,8 +28,11 @@ Pomatomus|pomatomus|10|1|1
 Pomatomus||10|1|9
 |Pomatomus|10|1|9
 P|p|10|1|1
-#TODO: one letter vs longer string generates a big negative number
-#L|Linneaus|10|1|7
+ab|a|10|0|1
+a|ab|10|0|1
+ab|a|10|1|1
+a|ab|10|1|1
+L|Linneaus|10|1|7
 
 
 #it should calculate Damerau Levenshtein distance with 1 character transpositions, insertions, deletions, substitutions (block size 1)

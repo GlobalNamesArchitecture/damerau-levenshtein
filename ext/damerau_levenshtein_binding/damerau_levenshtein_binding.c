@@ -32,7 +32,6 @@ VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VAL
 
   sl = (int) RARRAY_LEN(_s);
   tl = (int) RARRAY_LEN(_t);
-
   if (sl == 0) return INT2NUM(tl);
   if (tl == 0) return INT2NUM(sl);
   //case of lengths 1 must present or it will break further in the code
@@ -67,8 +66,8 @@ VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VAL
       half_sl = (sl - 1)/2;
       half_tl = (tl - 1)/2;
 
-      block = block_size < half_sl ? block_size : half_sl;
-      block = block < half_tl ? block : half_tl;
+      block = block_size < half_sl || half_sl == 0 ? block_size : half_sl;
+      block = block < half_tl || half_tl == 0 ? block : half_tl;
 
       while (block >= 1){
         int swap1 = 1;

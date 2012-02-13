@@ -24,6 +24,11 @@ Feature: something something
     Then I should receive edit distance "1"
   
   Scenario: find edit distance between one-character and multicharacter strings
+    Given strings "a" and "ab", block size "0", and a maximum allowed distance "4"
+    When I run "DamerauLevenshtein" method "distance"
+    Then I should receive edit distance "1"
+  
+  Scenario: find edit distance between one-character and multicharacter strings
     Given strings "a" and "ab", block size "1", and a maximum allowed distance "4"
     When I run "DamerauLevenshtein" method "distance"
     Then I should receive edit distance "1"
