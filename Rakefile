@@ -9,6 +9,7 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
+require 'rake/dsl_definition'
 require 'rake'
 require 'rake/extensiontask'
 

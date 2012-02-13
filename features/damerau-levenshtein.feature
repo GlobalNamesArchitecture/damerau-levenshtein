@@ -17,3 +17,13 @@ Feature: something something
     Given strings "Choriozopella trägårdhi" and "Choriozopella tragardhi", block size "1", and a maximum allowed distance "4"
     When I run "DamerauLevenshtein" method "distance"
     Then I should receive edit distance "2"
+  
+  Scenario: find edit distance between two strings with non-alphanumeric characters
+    Given strings "abcd" and "ab-cd", block size "1", and a maximum allowed distance "4"
+    When I run "DamerauLevenshtein" method "distance"
+    Then I should receive edit distance "1"
+  
+  Scenario: find edit distance between one-character and multicharacter strings
+    Given strings "a" and "ab", block size "1", and a maximum allowed distance "4"
+    When I run "DamerauLevenshtein" method "distance"
+    Then I should receive edit distance "1"
