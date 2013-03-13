@@ -48,8 +48,18 @@ Examples
 
     dl.distance("Sjöstedt", "Sjostedt") #returns 1
 
-Description
+API Description
 -----------
+
+Gem defines two methods
+
+    DamerauLevenshtein.version 
+    #returns version number of the gem
+    
+    DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
+    #returns [edit distance][7] between 2 strings
+
+
 
 DamerauLevenshtein.distance takes 4 arguments:
 
@@ -58,7 +68,7 @@ DamerauLevenshtein.distance takes 4 arguments:
 * block_size (default is 1)
 * max_distance (default is 10)
 
-block_size determines maximum number of characters in a transposition block:
+`block_size` determines maximum number of characters in a transposition block:
 
     block_size = 0 
     (transposition does not count -- it is a pure Levenshtein algorithm)
@@ -77,7 +87,7 @@ block_size determines maximum number of characters in a transposition block:
     
     etc.
 
-max_distance -- is a threshold after which algorithm gives up and 
+`max_distance` -- is a threshold after which algorithm gives up and 
 returns max_distance instead of real edit distance.
 
 Levenshtein algorithm is expensive, so it makes sense to give up when edit 
@@ -102,6 +112,11 @@ in a future version unintentionally.
 to have your own version, or is otherwise necessary, that is fine, but please 
 isolate to its own commit so I can cherry-pick around it.
 
+Versioning
+----------
+
+This gem is following practices of [Semantic Versioning][8]
+
 Authors
 -------
 
@@ -119,3 +134,5 @@ further details.
 [4]: http://travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein
 [5]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein.png
 [6]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein
+[7]: http://en.wikipedia.org/wiki/Edit_distance
+[8]: http://semver.org/
