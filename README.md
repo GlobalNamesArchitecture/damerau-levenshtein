@@ -94,8 +94,9 @@ Levenshtein algorithm is expensive, so it makes sense to give up when edit
 distance is becoming too big. The argument max_distance does just that.
 
     DamerauLevenshtein.distance('abcdefg', '1234567', 0, 3) 
-    #give up when edit distance exceeds 3)
-    
+    # output: 4 -- it gave up when edit distance exceeded 3
+
+
 Contributing to damerau-levenshtein
 -----------------------------------
  

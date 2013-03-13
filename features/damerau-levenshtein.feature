@@ -32,3 +32,8 @@ Feature: something something
     Given strings "a" and "ab", block size "1", and a maximum allowed distance "4"
     When I run "DamerauLevenshtein" method "distance"
     Then I should receive edit distance "1"
+  
+  Scenario: limit distance to maximum distance + 1
+    Given strings "abcdefg#$%123" and "higklmnop(*&ç123", block size "0", and a maximum allowed distance "4"
+    When I run "DamerauLevenshtein" method "distance"
+    Then I should receive edit distance "5"
