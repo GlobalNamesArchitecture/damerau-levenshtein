@@ -52,4 +52,5 @@ Rake::ExtensionTask.new('damerau_levenshtein_binding') do |extension|
 end
 
 Rake::Task[:spec].prerequisites << :compile
+Rake::Task[:features].prerequisites << :compile
 task :default => :spec
