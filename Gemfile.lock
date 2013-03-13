@@ -1,10 +1,9 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    archive-tar-minitar (0.5.2)
     bourne (1.1.2)
       mocha (= 0.10.5)
     builder (3.2.0)
@@ -14,6 +13,13 @@ GEM
       diff-lcs (>= 1.1.3)
       gherkin (~> 2.11.6)
       multi_json (~> 1.3)
+    debugger (1.4.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.2.0)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.2.0)
     diff-lcs (1.2.1)
     gherkin (2.11.6)
       json (>= 1.7.6)
@@ -25,8 +31,6 @@ GEM
       rake
       rdoc
     json (1.7.7)
-    linecache19 (0.5.12)
-      ruby_core_source (>= 0.1.4)
     metaclass (0.0.1)
     mocha (0.10.5)
       metaclass (~> 0.0.1)
@@ -44,17 +48,7 @@ GEM
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.13.0)
-    ruby-debug-base19 (0.11.25)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby_core_source (>= 0.1.4)
-    ruby-debug19 (0.11.6)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby-debug-base19 (>= 0.11.19)
     ruby-prof (0.13.0)
-    ruby_core_source (0.1.5)
-      archive-tar-minitar (>= 0.5.2)
     shoulda (3.3.2)
       shoulda-context (~> 1.0.1)
       shoulda-matchers (~> 1.4.1)
@@ -73,12 +67,12 @@ PLATFORMS
 DEPENDENCIES
   bundler
   cucumber
+  debugger
   jeweler
   mocha
   rake
   rake-compiler
   rspec
-  ruby-debug19
   ruby-prof
   shoulda
   simplecov
