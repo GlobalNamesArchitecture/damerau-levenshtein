@@ -65,14 +65,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1)
-  cucumber (~> 1)
-  debugger (~> 1)
-  jeweler (~> 1)
+  bundler (~> 1.0)
+  cucumber (~> 1.2)
+  debugger (~> 1.4)
+  jeweler (~> 1.8)
   mocha (~> 0.10)
-  rake (~> 10)
+  rake (~> 10.0)
   rake-compiler (~> 0.8)
-  rspec (~> 2)
+  rspec (~> 2.13)
   ruby-prof (~> 0.13)
-  shoulda (~> 3)
+  shoulda (~> 3.3)
   simplecov (~> 0.7)
