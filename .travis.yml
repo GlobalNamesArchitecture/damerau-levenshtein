@@ -1,7 +1,10 @@
 rvm:
   - 1.9.3
 bundler_args: --without development
-script: bundle exec cucumber
+script:
+  - "rake compile"
+  - "rake"
+  - "bundle exec cucumber"
 branches:
   only:
       - master
