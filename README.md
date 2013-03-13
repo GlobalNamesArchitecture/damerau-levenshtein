@@ -34,19 +34,19 @@ Examples
 
 * compare using Damerau Levenshtein algorithm
 
-    dl.distance("Something", "Smoething") #returns 1
+    `dl.distance("Something", "Smoething") #returns 1`
 
 * compare using Levensthein algorithm
   
-    dl.distance("Something", "Smoething", 0) #returns 2
+    `dl.distance("Something", "Smoething", 0) #returns 2`
 
 * compare using Boehmer & Rees modification
 
-    dl.distance("Something", "meSothing", 2) #returns 2 instead of 4
+    `dl.distance("Something", "meSothing", 2) #returns 2 instead of 4`
 
 * comparison of words with utf-8 characters should work fine:
 
-    dl.distance("Sjöstedt", "Sjostedt") #returns 1
+    `dl.distance("Sjöstedt", "Sjostedt") #returns 1`
 
 API Description
 -----------
