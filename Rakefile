@@ -17,7 +17,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "damerau-levenshtein"
-  gem.homepage = "http://github.com/dimus/damerau-levenshtein"
+  gem.homepage = "http://github.com/GlobalNamesArchitecture/damerau-levenshtein"
   gem.license = "MIT"
   gem.summary = %Q{Calculation of editing distance for 2 strings using Levenshtein or Damerau-Levenshtein algorithms}
   gem.description = %Q{Calculation of editing distance for 2 strings using Levenshtein or Damerau-Levenshtein algorithms}
