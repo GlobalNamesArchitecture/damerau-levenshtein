@@ -1,6 +1,10 @@
 damerau-levenshtein
 ===================
 
+[![Gem Version][1]][2]
+[![Continuous Integration Status][3]][4]
+[![Dependency Status][5]][6]
+
 The damerau-levenshtein gem allows to find edit distance between two UTF-8 
 or ASCII encoded strings with O(N**2) efficiency.
 
@@ -82,7 +86,8 @@ distance is becoming too big. The argument max_distance does just that.
     DamerauLevenshtein.distance('abcdefg', '1234567', 0, 3) 
     #give up when edit distance exceeds 3)
     
-== Contributing to damerau-levenshtein
+Contributing to damerau-levenshtein
+-----------------------------------
  
 * Check out the latest master to make sure the feature hasn't been 
 implemented or the bug hasn't been fixed yet
@@ -108,3 +113,9 @@ Copyright
 Copyright (c) 2011-2013 Marine Biological Laboratory. See LICENSE.txt for
 further details.
 
+[1]: https://badge.fury.io/rb/damerau-levenshtein.png
+[2]: http://badge.fury.io/rb/damerau-levenshtein
+[3]: https://secure.travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein.png
+[4]: http://travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein
+[5]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein.png
+[6]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein
