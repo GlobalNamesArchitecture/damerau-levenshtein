@@ -52,3 +52,5 @@ pkg
 
 # For rubinius:
 #*.rbc
+
+.rvmrc
