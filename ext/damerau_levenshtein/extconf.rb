@@ -1,6 +1,5 @@
 # Loads mkmf which is used to make makefiles for Ruby extensions
 require 'mkmf'
-puts "I'm in the extconf file!!"
 
 # The destination
 dir_config('damerau_levenshtein')
