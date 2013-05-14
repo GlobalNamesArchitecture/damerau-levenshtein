@@ -1,7 +1,6 @@
 *.sw?
 .DS_Store
 tmp
-*.gemspec
 *.o
 *.bundle
 # rcov generated
