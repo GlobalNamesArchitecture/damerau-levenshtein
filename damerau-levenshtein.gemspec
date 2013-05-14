@@ -1,6 +1,6 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-require "damerau-levenshtein/version"
+require "damerau_levenshtein/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.email = 'dmozzherin@gmail.com'
   s.files = `git ls-files`.split("\n")
   s.extensions = ['ext/damerau_levenshtein/extconf.rb']
+  s.require_paths = ["lib", "lib/damerau_levenshtein"]
 
   s.add_dependency 'bundler',       '~> 1.0'
   s.add_dependency 'rake',          '~> 10.0'
