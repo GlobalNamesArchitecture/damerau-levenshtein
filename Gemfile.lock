@@ -1,3 +1,11 @@
+PATH
+  remote: .
+  specs:
+    damerau-levenshtein (1.0.1)
+      bundler (~> 1.0)
+      rake (~> 10.0)
+      rake-compiler (~> 0.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -23,23 +31,15 @@ GEM
     diff-lcs (1.2.1)
     gherkin (2.11.6)
       json (>= 1.7.6)
-    git (1.2.5)
     i18n (0.6.4)
-    jeweler (1.8.4)
-      bundler (~> 1.0)
-      git (>= 1.2.5)
-      rake
-      rdoc
     json (1.7.7)
     metaclass (0.0.1)
     mocha (0.10.5)
       metaclass (~> 0.0.1)
     multi_json (1.6.1)
-    rake (10.0.3)
+    rake (10.0.4)
     rake-compiler (0.8.3)
       rake
-    rdoc (4.0.0)
-      json (~> 1.4)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -65,13 +65,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0)
   cucumber (~> 1.2)
+  damerau-levenshtein!
   debugger (~> 1.4)
-  jeweler (~> 1.8)
-  mocha (~> 0.10)
-  rake (~> 10.0)
-  rake-compiler (~> 0.8)
   rspec (~> 2.13)
   ruby-prof (~> 0.13)
   shoulda (~> 3.3)
