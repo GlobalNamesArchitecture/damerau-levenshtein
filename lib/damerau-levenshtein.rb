@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
 require 'damerau_levenshtein_binding'
+require 'damerau-levenshtein/version'
 
 module DamerauLevenshtein
   extend DamerauLevenshteinBinding
