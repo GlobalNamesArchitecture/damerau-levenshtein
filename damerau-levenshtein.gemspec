@@ -15,8 +15,7 @@ Gem::Specification.new do |s|
   s.authors = ['Dmitry Mozzherin']
   s.email = 'dmozzherin@gmail.com'
   s.files = `git ls-files`.split("\n")
-  s.extensions = ['ext/damerau-levenshtein/extconf.rb']
-  s.executables = ['damerau_levenshtein_binding']
+  s.extensions = ['ext/damerau_levenshtein/extconf.rb']
 
   s.add_dependency 'bundler',       '~> 1.0'
   s.add_dependency 'rake',          '~> 10.0'
