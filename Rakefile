@@ -3,6 +3,8 @@
 require 'rubygems'
 require 'bundler'
 
+Bundler::GemHelper.install_tasks
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
