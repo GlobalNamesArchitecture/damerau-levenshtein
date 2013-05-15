@@ -1,2 +1,6 @@
+1.0.2 -- includes refactoring by https://github.com/luislavena to remove
+dependency on jeweler
+
 1.0.1 -- fixed gem dependencies
+
 1.0.0 -- stable version

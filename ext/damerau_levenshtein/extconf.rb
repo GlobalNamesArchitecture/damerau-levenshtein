@@ -2,7 +2,7 @@
 require 'mkmf'
 
 # The destination
-dir_config('damerau_levenshtein')
+dir_config('damerau-levenshtein/damerau_levenshtein')
 
 # Do the work
-create_makefile('damerau_levenshtein/damerau_levenshtein_binding')
+create_makefile('damerau-levenshtein/damerau_levenshtein')
