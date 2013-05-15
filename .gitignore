@@ -3,6 +3,7 @@
 tmp
 *.o
 *.bundle
+*.gem
 # rcov generated
 coverage
 
