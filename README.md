@@ -4,6 +4,7 @@ damerau-levenshtein
 [![Gem Version][1]][2]
 [![Continuous Integration Status][3]][4]
 [![Dependency Status][5]][6]
+[![Coverage Status][9]][10]
 
 The damerau-levenshtein gem allows to find edit distance between two UTF-8 
 or ASCII encoded strings with O(N**2) efficiency.
@@ -137,3 +138,5 @@ further details.
 [6]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein
 [7]: http://en.wikipedia.org/wiki/Edit_distance
 [8]: http://semver.org/
+[9]: https://coveralls.io/repos/GlobalNamesArchitecture/damerau-levenshtein/badge.png?branch=master
+[10]: https://coveralls.io/r/GlobalNamesArchitecture/damerau-levenshtein?branch=master
