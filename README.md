@@ -4,10 +4,10 @@ damerau-levenshtein
 [![Gem Version][1]][2]
 [![Continuous Integration Status][3]][4]
 [![Dependency Status][5]][6]
-[![Coverage Status][9]][10]
+[![Coverage Status][7]][8]
 
 The damerau-levenshtein gem allows to find edit distance between two UTF-8 
-or ASCII encoded strings with O(N**2) efficiency.
+or ASCII encoded strings with O(N*M) efficiency.
 
 This gem implements pure Levenshtein algorithm, Damerau modification of it 
 (where 2 character transposition counts as 1 edit distance). It also includes 
@@ -58,7 +58,7 @@ Gem defines two methods
     #returns version number of the gem
     
     DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
-    #returns [edit distance][7] between 2 strings
+    #returns [edit distance][9] between 2 strings
 
 
 
@@ -117,7 +117,7 @@ isolate to its own commit so I can cherry-pick around it.
 Versioning
 ----------
 
-This gem is following practices of [Semantic Versioning][8]
+This gem is following practices of [Semantic Versioning][10]
 
 Authors
 -------
@@ -136,7 +136,7 @@ further details.
 [4]: http://travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein
 [5]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein.png
 [6]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein
-[7]: http://en.wikipedia.org/wiki/Edit_distance
-[8]: http://semver.org/
-[9]: https://coveralls.io/repos/GlobalNamesArchitecture/damerau-levenshtein/badge.png?branch=master
-[10]: https://coveralls.io/r/GlobalNamesArchitecture/damerau-levenshtein?branch=master
+[7]: https://coveralls.io/repos/GlobalNamesArchitecture/damerau-levenshtein/badge.png?branch=master
+[8]: https://coveralls.io/r/GlobalNamesArchitecture/damerau-levenshtein?branch=master
+[9]: http://en.wikipedia.org/wiki/Edit_distance
+[10]: http://semver.org/
