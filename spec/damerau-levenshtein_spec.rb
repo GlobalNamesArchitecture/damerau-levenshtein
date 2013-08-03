@@ -3,7 +3,9 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe DamerauLevenshtein do
 
   it 'should return version' do
-    DamerauLevenshtein::VERSION.should =~ /^\d+\.\d+\.\d+$/
+    ver = DamerauLevenshtein::VERSION
+    ver.should =~ /^\d+\.\d+\.\d+$/
+    DamerauLevenshtein::version.should == ver
   end
 
   it 'should get tests' do
