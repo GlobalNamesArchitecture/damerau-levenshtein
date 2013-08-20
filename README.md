@@ -122,7 +122,11 @@ This gem is following practices of [Semantic Versioning][10]
 Authors
 -------
 
-Dmitry Mozzherin
+[Dmitry Mozzherin][11]
+
+Contributors
+
+[lazylester][12]
 
 Copyright
 ---------
@@ -140,3 +144,5 @@ further details.
 [8]: https://coveralls.io/r/GlobalNamesArchitecture/damerau-levenshtein?branch=master
 [9]: http://en.wikipedia.org/wiki/Edit_distance
 [10]: http://semver.org/
+[11]: https://github.com/dimus
+[12]: https://github.com/lazylester
