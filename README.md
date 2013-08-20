@@ -125,6 +125,7 @@ Authors
 [Dmitry Mozzherin][11]
 
 Contributors
+------------
 
 [lazylester][12]
 
