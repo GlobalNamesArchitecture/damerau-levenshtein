@@ -6,7 +6,7 @@ gem 'rake-compiler', '~> 0.8'
 gem 'json',          '~> 1.7.7'
 
 group :development do
-  gem 'debugger',  '~> 1.5'
+  gem 'debugger',  '~> 1.6'
 end
 
 group :test do
