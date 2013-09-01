@@ -16,6 +16,7 @@ doc
 
 # bundler
 .bundle
+bin
 
-# jeweler generated
-pkg
+# generated gems
+*.gem

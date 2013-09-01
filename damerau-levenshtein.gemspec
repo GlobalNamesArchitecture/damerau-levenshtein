@@ -1,12 +1,12 @@
-$:.push File.expand_path("../lib", __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
 
-require "damerau-levenshtein/version"
+require 'damerau-levenshtein/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name = "damerau-levenshtein"
+  s.name = 'damerau-levenshtein'
   s.version = DamerauLevenshtein::VERSION
-  s.homepage = "https://github.com/GlobalNamesArchitecture/damerau-levenshtein"
+  s.homepage = 'https://github.com/GlobalNamesArchitecture/damerau-levenshtein'
   s.license = 'MIT'
   s.summary = %Q{Calculation of editing distance for 2 strings \
     using Levenshtein or Damerau-Levenshtein algorithms}
@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.email = 'dmozzherin@gmail.com'
   s.files = `git ls-files`.split("\n")
   s.extensions = ['ext/damerau_levenshtein/extconf.rb']
-  s.require_paths = ["lib", "lib/damerau-levenshtein"]
+  s.require_paths = ['lib', 'lib/damerau-levenshtein']
 end
