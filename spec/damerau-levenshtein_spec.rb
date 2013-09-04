@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'spec_helper'
 
 describe DamerauLevenshtein do
 
@@ -9,8 +9,7 @@ describe DamerauLevenshtein do
   end
 
   it 'should get tests' do
-    tests = File.expand_path(File.dirname(__FILE__)) + 
-              '/damerau_levenshtein_test.txt'
+    tests = 'spec/damerau_levenshtein_test.txt'
 
     read_test_file(tests, 5) do |y|
       dl = DamerauLevenshtein
