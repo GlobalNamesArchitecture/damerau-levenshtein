@@ -1,10 +1,10 @@
 damerau-levenshtein
 ===================
 
-[![Gem Version][1]][2]
-[![Continuous Integration Status][3]][4]
-[![Dependency Status][5]][6]
-[![Coverage Status][7]][8]
+[![Gem Version][gem_svg]][gem]
+[![Continuous Integration Status][ci_svg]][ci]
+[![Dependency Status][dep_svg]][dep]
+[![Coverage Status][cov_svg]][cov]
 
 The damerau-levenshtein gem allows to find edit distance between two UTF-8
 or ASCII encoded strings with O(N\*M) efficiency.
@@ -71,7 +71,7 @@ DamerauLevenshtein.version
 #returns version number of the gem
 
 DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
-#returns [edit distance][9] between 2 strings
+#returns [edit distance][ed] between 2 strings
 ```
 
 
@@ -108,9 +108,10 @@ returns max_distance instead of real edit distance.
 Levenshtein algorithm is expensive, so it makes sense to give up when edit
 distance is becoming too big. The argument max_distance does just that.
 
-    DamerauLevenshtein.distance('abcdefg', '1234567', 0, 3)
-    # output: 4 -- it gave up when edit distance exceeded 3
-
+```ruby
+DamerauLevenshtein.distance('abcdefg', '1234567', 0, 3)
+# output: 4 -- it gave up when edit distance exceeded 3
+```
 
 Contributing to damerau-levenshtein
 -----------------------------------
@@ -131,17 +132,17 @@ isolate to its own commit so I can cherry-pick around it.
 Versioning
 ----------
 
-This gem is following practices of [Semantic Versioning][10]
+This gem is following practices of [Semantic Versioning][semver]
 
 Authors
 -------
 
-[Dmitry Mozzherin][11]
+[Dmitry Mozzherin][dimus]
 
 Contributors
 ------------
 
-[lazylester][12]
+[lazylester][lazylester]
 
 Copyright
 ---------
@@ -149,15 +150,15 @@ Copyright
 Copyright (c) 2011-2013 Marine Biological Laboratory. See LICENSE.txt for
 further details.
 
-[1]: https://badge.fury.io/rb/damerau-levenshtein.png
-[2]: http://badge.fury.io/rb/damerau-levenshtein
-[3]: https://secure.travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein.png
-[4]: http://travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein
-[5]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein.png
-[6]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein
-[7]: https://coveralls.io/repos/GlobalNamesArchitecture/damerau-levenshtein/badge.png?branch=master
-[8]: https://coveralls.io/r/GlobalNamesArchitecture/damerau-levenshtein?branch=master
-[9]: http://en.wikipedia.org/wiki/Edit_distance
-[10]: http://semver.org/
-[11]: https://github.com/dimus
-[12]: https://github.com/lazylester
+[gem_svg]: https://badge.fury.io/rb/damerau-levenshtein.svg
+[gem]: http://badge.fury.io/rb/damerau-levenshtein
+[ci_svg]: https://secure.travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein.svg
+[ci]: http://travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein
+[dep_svg]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein.svg
+[dep]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein
+[cov_svg]: https://coveralls.io/repos/GlobalNamesArchitecture/damerau-levenshtein/badge.svg?branch=master
+[cov]: https://coveralls.io/r/GlobalNamesArchitecture/damerau-levenshtein?branch=master
+[ed]: http://en.wikipedia.org/wiki/Edit_distance
+[semver]: http://semver.org/
+[dimus]: https://github.com/dimus
+[lazylester]: https://github.com/lazylester
