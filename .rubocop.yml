@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - features/**/*
+    - db/**/*
+    - bundle_bin/**/*
+  Include:
+    - damerau-levenshtein.gemspec
+Metrics/ModuleLength:
+  Max: 1000
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/DotPosition:
+  EnforcedStyle: trailing
+Style/FileName:
+  Enabled: false
