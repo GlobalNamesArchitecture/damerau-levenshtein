@@ -147,7 +147,7 @@ Contributors
 Copyright
 ---------
 
-Copyright (c) 2011-2013 Marine Biological Laboratory. See LICENSE.txt for
+Copyright (c) 2011-2015 Marine Biological Laboratory. See LICENSE.txt for
 further details.
 
 [gem_svg]: https://badge.fury.io/rb/damerau-levenshtein.svg
