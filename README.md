@@ -32,8 +32,7 @@ Examples
 --------
 
 ```ruby
-require 'rubygems' #not needed for ruby >= 1.9.0
-require 'damerau-levenshtein'
+require "damerau-levenshtein"
 dl = DamerauLevenshtein
 ```
 
@@ -109,7 +108,7 @@ Levenshtein algorithm is expensive, so it makes sense to give up when edit
 distance is becoming too big. The argument max_distance does just that.
 
 ```ruby
-DamerauLevenshtein.distance('abcdefg', '1234567', 0, 3)
+DamerauLevenshtein.distance("abcdefg", "1234567", 0, 3)
 # output: 4 -- it gave up when edit distance exceeded 3
 ```
 
