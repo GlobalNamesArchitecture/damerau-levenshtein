@@ -16,8 +16,8 @@ of bigger than 1 character blocks is taken in account as well
 (Boehmer & Rees 2008).
 
 ```ruby
-require 'damerau-levenshtein'
-DamerauLevenshtein.distance('Something', 'Smoething') #returns 1
+require "damerau-levenshtein"
+DamerauLevenshtein.distance("Something", "Smoething") #returns 1
 ```
 
 Gem damerau-levenshtein is compatible with ruby versions 1.8.7
