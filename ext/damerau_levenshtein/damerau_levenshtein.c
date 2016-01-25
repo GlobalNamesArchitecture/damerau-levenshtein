@@ -91,7 +91,7 @@ VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VAL
         min = del;
         if (ins < min) min = ins;
         //if (i == 2 && j==2) return INT2NUM(swap2+5);
-        if (pure_levenshtein == 0 && i >= block && j >= block && swap1 == 1 && swap2 == 1){
+        if (pure_levenshtein == 0 && i >= 2*block && j >= 2*block && swap1 == 1 && swap2 == 1){
           transp = d[(j - block * 2) * sl + i - block * 2] + cost + block -1;
           if (transp < min) min = transp;
           block = 0;
