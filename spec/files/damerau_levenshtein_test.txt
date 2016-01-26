@@ -43,9 +43,9 @@ L|Linneaus|10|1|7
 Pomatomus|Pomatomux|10|1|1
 # 1 deletion
 Pmatomus|Pomatomus|10|1|1
-# 1 deletion 
+# 1 deletion
 Pomatomus|Pmatomus|10|1|1
-# 1 substitution 
+# 1 substitution
 Rpmatomus|Pomatomus|10|1|2
 # 1 substitution
 Pommtomus|Pomatomus|10|1|1
