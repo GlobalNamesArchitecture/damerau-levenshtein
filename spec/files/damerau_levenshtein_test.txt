@@ -37,7 +37,6 @@ ab|-|10|0|2
 a|ab|10|1|1
 L|Linneaus|10|1|7
 
-
 #it should calculate Damerau Levenshtein distance with 1 character transpositions, insertions, deletions, substitutions (block size 1)
 # 1 substitution
 Pomatomus|Pomatomux|10|1|1

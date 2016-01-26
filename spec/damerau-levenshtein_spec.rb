@@ -20,5 +20,12 @@ describe DamerauLevenshtein do
         end
       end
     end
+
+    it "does not generate random negative distance" do
+      100_000.times do
+        distance = DamerauLevenshtein.distance("aaaa", "aaaa", 1, 2)
+        expect(distance).to(be >= 0)
+      end
+    end
   end
 end
