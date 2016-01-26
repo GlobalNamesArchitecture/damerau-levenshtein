@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
                   "1 character blocks is taken in account as well " \
                   "(Boehmer & Rees 2008)."
   s.files = `git ls-files -z`.split("\x0").
-    reject { |f| f.match(%r{^(test|spec|features)/}) }
+            reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.extensions = ["ext/damerau_levenshtein/extconf.rb"]
   s.require_paths = ["lib", "lib/damerau-levenshtein"]
 
