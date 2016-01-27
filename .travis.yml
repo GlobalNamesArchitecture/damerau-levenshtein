@@ -3,9 +3,11 @@ rvm:
   - 2.0
   - 2.1
   - 2.2
+before_install:
+  - "gem install bundle"
 script:
-  - 'bundle exec rake'
-  - 'bundle exec rake features'
+  - "bundle exec rake"
+  - "bundle exec rake features"
 branches:
   only:
       - master
