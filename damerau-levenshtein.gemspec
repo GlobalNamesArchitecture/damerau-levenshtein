@@ -24,14 +24,14 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib", "lib/damerau-levenshtein"]
 
   s.add_dependency "bundler", "~> 1.11"
-  s.add_dependency "rake", "~> 10.4"
+  s.add_dependency "rake", "~> 10.5"
   s.add_dependency "rake-compiler", "~> 0.9"
   s.add_dependency "json", "~> 1.8"
 
-  s.add_development_dependency "rspec", "~> 3.2"
-  s.add_development_dependency "cucumber", "~> 2.0"
+  s.add_development_dependency "rspec", "~> 3.4"
+  s.add_development_dependency "cucumber", "~> 2.3"
   s.add_development_dependency "ruby-prof", "~> 0.15"
   s.add_development_dependency "shoulda", "~> 3.5"
-  s.add_development_dependency "rubocop", "~> 0.30"
+  s.add_development_dependency "rubocop", "~> 0.36"
   s.add_development_dependency "coveralls", "~> 0.8"
 end
