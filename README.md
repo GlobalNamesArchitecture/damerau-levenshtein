@@ -26,7 +26,7 @@ and 1.9.2 and higher, as well as 2.0.0 and higher
 DepeVndencies
 -------------
 
-    $ apt-get install build-essentials libgmp3-dev
+    $ apt-get install build-essential libgmp3-dev
 
 Installation
 ------------
