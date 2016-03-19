@@ -147,6 +147,7 @@ Contributors
 ------------
 
 [lazylester][lazylester]
+[Ran Xie][skarlit]
 
 Copyright
 ---------
@@ -166,3 +167,4 @@ further details.
 [semver]: http://semver.org/
 [dimus]: https://github.com/dimus
 [lazylester]: https://github.com/lazylester
+[skarlit]: https://github.com/Skarlit
