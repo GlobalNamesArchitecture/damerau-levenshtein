@@ -23,7 +23,7 @@ DamerauLevenshtein.distance("Something", "Smoething") #returns 1
 Gem damerau-levenshtein is compatible with ruby versions 1.8.7
 and 1.9.2 and higher, as well as 2.0.0 and higher
 
-DepeVndencies
+Dependencies
 -------------
 
     sudo apt-get install build-essential libgmp3-dev
