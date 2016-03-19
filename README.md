@@ -146,8 +146,7 @@ Authors
 Contributors
 ------------
 
-[lazylester][lazylester]
-[Ran Xie][skarlit]
+[lazylester][lazylester], [Ran Xie][skarlit]
 
 Copyright
 ---------
