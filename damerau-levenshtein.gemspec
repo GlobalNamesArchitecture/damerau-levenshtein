@@ -12,12 +12,11 @@ Gem::Specification.new do |s|
   s.summary = "Calculation of editing distance for 2 strings " \
               "using Levenshtein or Damerau-Levenshtein algorithms"
   s.description = "This gem implements pure Levenshtein algorithm, " \
-                  "Damerau modification of it (where 2 character " \
+                  "Damerau modification (where 2 character " \
                   "transposition counts as 1 edit distance). It also " \
-                  "includes Boehmer & Rees 2008 modification " \
-                  "of Damerau algorithm, where transposition of bigger than " \
-                  "1 character blocks is taken in account as well " \
-                  "(Boehmer & Rees 2008)."
+                  "includes Boehmer & Rees 2008 modification, " \
+                  "to handle transposition in bloks with more than " \
+                  "2 characters (Boehmer & Rees 2008)."
   s.files = `git ls-files -z`.split("\x0").
             reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.extensions = ["ext/damerau_levenshtein/extconf.rb"]
