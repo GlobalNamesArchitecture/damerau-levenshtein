@@ -146,7 +146,7 @@ Authors
 Contributors
 ------------
 
-[lazylester][lazylester], [Ran Xie][skarlit]
+[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti]
 
 Copyright
 ---------
@@ -167,3 +167,4 @@ further details.
 [dimus]: https://github.com/dimus
 [lazylester]: https://github.com/lazylester
 [skarlit]: https://github.com/Skarlit
+[ixti]: https://github.com/ixti
