@@ -1,5 +1,6 @@
 damerau-levenshtein CHANGELOG
 =============================
+1.1.2 -- remove unnecessary production dependencies (by @ixti)
 1.1.1 -- fix random negative distance bug (by @Skarlit)
 1.1.0 -- relax and update gem dependencies, update specs
 
