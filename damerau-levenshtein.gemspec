@@ -22,15 +22,13 @@ Gem::Specification.new do |s|
   s.extensions = ["ext/damerau_levenshtein/extconf.rb"]
   s.require_paths = ["lib", "lib/damerau-levenshtein"]
 
-  s.add_dependency "bundler", "~> 1.11"
-  s.add_dependency "rake", "~> 11.1"
-  s.add_dependency "rake-compiler", "~> 0.9"
-  s.add_dependency "json", "~> 1.8"
-
   s.add_development_dependency "rspec", "~> 3.4"
   s.add_development_dependency "cucumber", "~> 2.3"
   s.add_development_dependency "ruby-prof", "~> 0.15"
   s.add_development_dependency "shoulda", "~> 3.5"
   s.add_development_dependency "rubocop", "~> 0.38"
   s.add_development_dependency "coveralls", "~> 0.8"
+  s.add_development_dependency "bundler", "~> 1.11"
+  s.add_development_dependency "rake", "~> 11.1"
+  s.add_development_dependency "rake-compiler", "~> 0.9"
 end
