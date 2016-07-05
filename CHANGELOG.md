@@ -1,6 +1,8 @@
 damerau-levenshtein CHANGELOG
 =============================
 
+1.2.3 -- add ruby 2.3.1 to travis tests by request from @greysteil
+
 1.1.2 -- remove unnecessary production dependencies (by @ixti)
 
 1.1.1 -- fix random negative distance bug (by @Skarlit)
