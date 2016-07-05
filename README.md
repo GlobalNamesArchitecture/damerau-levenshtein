@@ -13,7 +13,7 @@ This gem implements pure Levenshtein algorithm, Damerau modification of it
 (where 2 character transposition counts as 1 edit distance). It also includes
 Boehmer & Rees 2008 modification of Damerau algorithm, where transposition
 of bigger than 1 character blocks is taken in account as well
-(Boehmer & Rees 2008).
+[(Rees 2014)][rees2014].
 
 ```ruby
 require "damerau-levenshtein"
@@ -168,3 +168,4 @@ further details.
 [lazylester]: https://github.com/lazylester
 [skarlit]: https://github.com/Skarlit
 [ixti]: https://github.com/ixti
+[rees2014]: https://dx.doi.org/10.1371/journal.pone.0107510
