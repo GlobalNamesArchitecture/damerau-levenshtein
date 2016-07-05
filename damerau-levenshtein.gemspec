@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib", "lib/damerau-levenshtein"]
 
   s.add_development_dependency "rspec", "~> 3.4"
+  s.add_development_dependency "activesupport", "~> 4.2"
   s.add_development_dependency "cucumber", "~> 2.3"
   s.add_development_dependency "ruby-prof", "~> 0.15"
   s.add_development_dependency "shoulda", "~> 3.5"
