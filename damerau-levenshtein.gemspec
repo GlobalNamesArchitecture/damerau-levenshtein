@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
                   "Damerau modification (where 2 character " \
                   "transposition counts as 1 edit distance). It also " \
                   "includes Boehmer & Rees 2008 modification, " \
-                  "to handle transposition in bloks with more than " \
+                  "to handle transposition in blocks with more than " \
                   "2 characters (Boehmer & Rees 2008)."
   s.files = `git ls-files -z`.split("\x0").
             reject { |f| f.match(%r{^(test|spec|features)/}) }
