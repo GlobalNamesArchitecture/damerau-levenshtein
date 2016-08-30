@@ -28,4 +28,38 @@ describe DamerauLevenshtein do
       end
     end
   end
+
+  describe ".string_distance" do
+    it "is an alias for .distance" do
+      tests = "spec/files/damerau_levenshtein_test.txt"
+
+      read_test_file(tests, 5) do |y|
+        dl = DamerauLevenshtein
+        if y
+          res1 = dl.distance(y[0], y[1], y[3].to_i, y[2].to_i)
+          res2 = dl.string_distance(y[0], y[1], y[3].to_i, y[2].to_i)
+          expect(res1).to eq res2
+        end
+      end
+    end
+  end
+
+  describe ".array_distance" do
+    it "works for arrays with elements up to 2**63 - 1" do
+      distance = DamerauLevenshtein.array_distance(
+        [2**63 - 1, 2**62, 2**61, 2**60],
+        [2**63 - 1, 2**61, 2**62, 2**59]
+      )
+      expect(distance).to eq 2
+    end
+  end
+
+  describe ".distance_utf" do
+    it "is an alias to internal C implementation" do
+      args = [[1, 2, 3], [1, 2, 3, 4], 1, 10]
+      res1 = DamerauLevenshtein.distance_utf(*args)
+      res2 = DamerauLevenshtein.internal_distance(*args)
+      expect(res1).to eq(res2)
+    end
+  end
 end
