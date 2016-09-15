@@ -82,10 +82,10 @@ DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
 
 DamerauLevenshtein.distance takes 4 arguments:
 
-* string1
-* string2
-* block_size (default is 1)
-* max_distance (default is 10)
+* `string1`
+* `string2`
+* `block_size` (default is 1)
+* `max_distance` (default is 10)
 
 `block_size` determines maximum number of characters in a transposition block:
 
@@ -117,6 +117,17 @@ DamerauLevenshtein.distance("abcdefg", "1234567", 0, 3)
 # output: 4 -- it gave up when edit distance exceeded 3
 ```
 
+`DamerauLevenshtein.string_distance` is an alias of
+`DamerauLevenshtein.distance`
+
+`DamerauLevenshtein.array_distance` has the same parameters as
+`DamerauLevenshtein.distance`, but operates on arrays of Integers.
+
+```ruby
+DamerauLevenshtein.array_distance([1,2,4], [1,2,3])
+# output: 1
+```
+
 Contributing to damerau-levenshtein
 -----------------------------------
 
@@ -146,7 +157,8 @@ Authors
 Contributors
 ------------
 
-[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti]
+[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti],
+[azhi][azhi]
 
 Copyright
 ---------
@@ -168,4 +180,5 @@ further details.
 [lazylester]: https://github.com/lazylester
 [skarlit]: https://github.com/Skarlit
 [ixti]: https://github.com/ixti
+[azhi]: https://github.com/azhi
 [rees2014]: https://dx.doi.org/10.1371/journal.pone.0107510
