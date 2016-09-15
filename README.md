@@ -1,5 +1,4 @@
-damerau-levenshtein
-===================
+# damerau-levenshtein #
 
 [![Gem Version][gem_svg]][gem]
 [![Continuous Integration Status][ci_svg]][ci]
@@ -23,18 +22,15 @@ DamerauLevenshtein.distance("Something", "Smoething") #returns 1
 Gem damerau-levenshtein is compatible with ruby versions 1.8.7
 and 1.9.2 and higher, as well as 2.0.0 and higher
 
-Dependencies
--------------
+## Dependencies ##
 
     sudo apt-get install build-essential libgmp3-dev
 
-Installation
-------------
+## Installation ##
 
     gem install damerau-levenshtein
 
-Examples
---------
+## Examples ##
 
 ```ruby
 require "damerau-levenshtein"
@@ -65,10 +61,15 @@ dl.distance("Something", "meSothing", 2) #returns 2 instead of 4
 dl.distance("Sjöstedt", "Sjostedt") #returns 1
 ```
 
-API Description
------------
+* compare two arrays
 
-Gem defines two methods
+```ruby
+dl.array_distance([1,2,3,5], [1,2,3,4]) #returns 1
+```
+
+## API Description ##
+
+### Methods ###
 
 ```ruby
 DamerauLevenshtein.version
@@ -76,14 +77,18 @@ DamerauLevenshtein.version
 
 DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
 #returns [edit distance][ed] between 2 strings
+
+DamerauLevenshtein.string_distance(string1, string2, block_size, max_distance)
+# an alias for .distance
+
+DamerauLevenshtein.array_distance(array1, array2, block_size, max_distance)
+# returns [edit distance][ed] between 2 arrays of integers
 ```
 
+`DamerauLevenshtein.distance` and `.array_distance` take 4 arguments:
 
-
-DamerauLevenshtein.distance takes 4 arguments:
-
-* `string1`
-* `string2`
+* `string1` (`array1` for `.array_distance`)
+* `string2` (`array2` for `.array_distance`)
 * `block_size` (default is 1)
 * `max_distance` (default is 10)
 
@@ -113,55 +118,40 @@ Levenshtein algorithm is expensive, so it makes sense to give up when edit
 distance is becoming too big. The argument max_distance does just that.
 
 ```ruby
+
 DamerauLevenshtein.distance("abcdefg", "1234567", 0, 3)
 # output: 4 -- it gave up when edit distance exceeded 3
+
 ```
 
-`DamerauLevenshtein.string_distance` is an alias of
-`DamerauLevenshtein.distance`
-
-`DamerauLevenshtein.array_distance` has the same parameters as
-`DamerauLevenshtein.distance`, but operates on arrays of Integers.
-
-```ruby
-DamerauLevenshtein.array_distance([1,2,4], [1,2,3])
-# output: 1
-```
-
-Contributing to damerau-levenshtein
------------------------------------
+## Contributing to damerau-levenshtein ##
 
 * Check out the latest master to make sure the feature hasn't been
-implemented or the bug hasn't been fixed yet
+  implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested
-it and/or contributed it
+  it and/or contributed it
 * Fork the project
 * Start a feature/bugfix branch
 * Commit and push until you are happy with your contribution
 * Make sure to add tests for it. This is important so I don't break it
-in a future version unintentionally.
+  in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want
-to have your own version, or is otherwise necessary, that is fine, but please
-isolate to its own commit so I can cherry-pick around it.
+  to have your own version, or is otherwise necessary, that is fine, but please
+  isolate to its own commit so I can cherry-pick around it.
 
-Versioning
-----------
+## Versioning ##
 
 This gem is following practices of [Semantic Versioning][semver]
 
-Authors
--------
+## Authors ##
 
 [Dmitry Mozzherin][dimus]
 
-Contributors
-------------
+## Contributors ##
 
-[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti],
-[azhi][azhi]
+[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti], [azhi][azhi]
 
-Copyright
----------
+## Copyright ##
 
 Copyright (c) 2011-2016 Dmitry Mozzherin. See LICENSE.txt for
 further details.
