@@ -4,14 +4,14 @@ VALUE DamerauLevenshteinBinding = Qnil;
 
 void Init_damerau_levenshtein();
 
-VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VALUE _max_distance);
+VALUE method_internal_distance(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VALUE _max_distance);
 
 void Init_damerau_levenshtein() {
 	DamerauLevenshteinBinding = rb_define_module("DamerauLevenshteinBinding");
-	rb_define_method(DamerauLevenshteinBinding, "distance_utf", method_distance_utf, 4);
+	rb_define_method(DamerauLevenshteinBinding, "internal_distance", method_internal_distance, 4);
 }
 
-VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VALUE _max_distance){
+VALUE method_internal_distance(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VALUE _max_distance){
   VALUE *sv = RARRAY_PTR(_s);
   VALUE *tv = RARRAY_PTR(_t);
   int i, i1, j, j1, k, half_tl, cost, *d, distance, del, ins, subs, transp, block;
@@ -24,8 +24,8 @@ VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VAL
   int max_distance = NUM2INT(_max_distance);
   int sl = (int) RARRAY_LEN(_s);
   int tl = (int) RARRAY_LEN(_t);
-  int s[sl];
-  int t[tl];
+  long long s[sl];
+  long long t[tl];
   
   if (block_size == 0) {
     pure_levenshtein = 1;
@@ -39,8 +39,8 @@ VALUE method_distance_utf(VALUE self, VALUE _s, VALUE _t, VALUE _block_size, VAL
   if (sl == 1 && tl == 1 && sv[0] != tv[0]) return INT2NUM(1);
 
 
-  for (i=0; i < sl; i++) s[i] = NUM2INT(sv[i]);
-  for (i=0; i < tl; i++) t[i] = NUM2INT(tv[i]);
+  for (i=0; i < sl; i++) s[i] = NUM2LL(sv[i]);
+  for (i=0; i < tl; i++) t[i] = NUM2LL(tv[i]);
 
   sl++;
   tl++;
