@@ -5,8 +5,8 @@
 [![Dependency Status][dep_svg]][dep]
 [![Coverage Status][cov_svg]][cov]
 
-The damerau-levenshtein gem allows to find edit distance between two UTF-8
-or ASCII encoded strings with O(N\*M) efficiency.
+The damerau-levenshtein gem allows to find [edit distance][ed] between two
+UTF-8 or ASCII encoded strings with O(N\*M) efficiency.
 
 This gem implements pure Levenshtein algorithm, Damerau modification of it
 (where 2 character transposition counts as 1 edit distance). It also includes
@@ -76,13 +76,13 @@ DamerauLevenshtein.version
 #returns version number of the gem
 
 DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
-#returns [edit distance][ed] between 2 strings
+#returns edit distance between 2 strings
 
 DamerauLevenshtein.string_distance(string1, string2, block_size, max_distance)
 # an alias for .distance
 
 DamerauLevenshtein.array_distance(array1, array2, block_size, max_distance)
-# returns [edit distance][ed] between 2 arrays of integers
+# returns edit distance between 2 arrays of integers
 ```
 
 `DamerauLevenshtein.distance` and `.array_distance` take 4 arguments:
