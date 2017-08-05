@@ -3,6 +3,7 @@ AllCops:
     - features/**/*
     - db/**/*
     - bundle_bin/**/*
+    - spec/**/*
   Include:
     - damerau-levenshtein.gemspec
 Metrics/ModuleLength:

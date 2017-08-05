@@ -1,4 +1,5 @@
 # encoding: UTF-8
+# frozen_string_literal: true
 
 require "damerau-levenshtein/version"
 require "damerau-levenshtein/damerau_levenshtein"

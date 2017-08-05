@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 
 require "damerau-levenshtein/version"
+
+# rubocop:disable Metrics/BlockLength
 
 Gem::Specification.new do |s|
   s.name = "damerau-levenshtein"
@@ -34,3 +38,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake", "~> 11.2"
   s.add_development_dependency "rake-compiler", "~> 1.0"
 end
+
+# rubocop:enable all
