@@ -1,6 +1,8 @@
 damerau-levenshtein CHANGELOG
 =============================
 
+1.3.0 -- (issue #10) shows difference between two strings
+
 1.2.0 -- add edit distance for array of integers (by @azhi)
 
 1.1.3 -- add ruby 2.3.1 to travis tests by request from @greysteil
