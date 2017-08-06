@@ -3,6 +3,8 @@
 
 require "damerau-levenshtein/version"
 require "damerau-levenshtein/damerau_levenshtein"
+require "damerau-levenshtein/formatter"
+require "damerau-levenshtein/differ"
 
 # Damerau-Levenshtein algorithm
 module DamerauLevenshtein
