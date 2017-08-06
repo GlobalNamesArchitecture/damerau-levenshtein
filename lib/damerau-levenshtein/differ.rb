@@ -25,10 +25,21 @@ module DamerauLevenshtein
       prepare_matrix
       edit_distance(str1, str2)
       raw = trace_back
-      formatter_factory(@format).new(str1, str2, raw).format
+      formatter_factory.show(raw, str1, str2)
     end
 
     private
+
+    def formatter_factory
+      formatter =
+        case @format
+        when :tag
+          DamerauLevenshtein::FormatterTag
+        when :raw
+          DamerauLevenshtein::FormatterRaw
+        end
+      Formatter.new(formatter)
+    end
 
     def edit_distance(str1, str2)
       (1..@len2).each do |i|

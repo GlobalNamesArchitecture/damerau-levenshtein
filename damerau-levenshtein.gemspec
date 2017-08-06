@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", "~> 3.5"
   # activesupport >= 5.0 does not support Ruby < 2.2
   s.add_development_dependency "activesupport", "~> 4.2"
+  s.add_development_dependency "byebug", "~> 9.0"
   s.add_development_dependency "cucumber", "~> 2.4"
   s.add_development_dependency "ruby-prof", "~> 0.15"
   s.add_development_dependency "shoulda", "~> 3.5"
