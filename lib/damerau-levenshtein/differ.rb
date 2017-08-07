@@ -10,8 +10,6 @@ module DamerauLevenshtein
     def initialize
       @format = :raw
       @matrix = []
-      @len1 = 0
-      @len2 = 0
     end
 
     def format=(new_format)
@@ -20,8 +18,8 @@ module DamerauLevenshtein
     end
 
     def show(str1, str2)
-      @len1 = str1.size
-      @len2 = str2.size
+      @len1 = str1.size.freeze
+      @len2 = str2.size.freeze
       prepare_matrix
       edit_distance(str1, str2)
       raw = trace_back
@@ -70,9 +68,14 @@ module DamerauLevenshtein
     end
 
     def find_previous(cell)
-      [[[ins(*cell), 1], :ins, [cell[0], cell[1] - 1]],
-       [[del(*cell), 2], :del, [cell[0] - 1, cell[1]]],
-       [[subst(*cell), 0], :subst, [cell[0] - 1, cell[1] - 1]]].
+      candidates = [[[ins(*cell), 1], :ins, [cell[0], cell[1] - 1]],
+                    [[del(*cell), 2], :del, [cell[0] - 1, cell[1]]],
+                    [[subst(*cell), 0], :subst, [cell[0] - 1, cell[1] - 1]]]
+      select_cell(candidates)
+    end
+
+    def select_cell(candidates)
+      candidates.select { |e| e[-1][0] >= 0 && e[-1][1] >= 0 }.
         sort_by(&:first).first
     end
 

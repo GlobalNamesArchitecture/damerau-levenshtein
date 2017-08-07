@@ -21,29 +21,71 @@ module DamerauLevenshtein
 
   # Outputs strings marked with tags
   module FormatterTag
-    def self.show(raw_format, str1, str2)
-      inverted_raw_format = raw_format.map do |e|
-        e[:type] = :ins if e[:type] == :del
-        e[:type] = :del if e[:dype] == :ins
-        e
+    class << self
+      def show(raw_format, str1, str2)
+        inverted_raw_format = raw_format.map do |e|
+          type = invert_type(e[:type])
+          { distance: e[:distance], type: type }
+        end
+        [show_string(raw_format, str1, str2),
+         show_string(inverted_raw_format, str2, str1)]
       end
-      [show_string(raw_format, str1), show_string(inverted_raw_format, str2)]
-    end
 
-    def self.show_string(raw, str)
-      str = []
-      current_type = nil
-      raw.each_with_index do |e, i|
-        current_type = process_entry(str, e, i, current_type)
+      private
+
+      def invert_type(type)
+        case type
+        when :del
+          :ins
+        when :ins
+          :del
+        else
+          type
+        end
       end
-      str << format("</%s>", current_type) if current_type != :same
-    end
 
-    def process_entry(str, e, _, current_type)
-      return e[:type] if current_type && e[:type] != current_type &&
-                         current_type != :same
-      str << format("</%s>", current_type)
-      str << format("<%s>", e[:type]) if e[:type] != :same
+      def show_string(raw, str1, str2)
+        data = { res: [], type: nil, deletes: 0, inserts: 0,
+                 str1: str1, str2: str2 }
+        raw.each_with_index do |e, i|
+          process_entry(e, i, data)
+        end
+        data[:res] << format("</%s>", data[:type]) if data[:type] != :same
+        data[:res].join("")
+      end
+
+      def process_entry(e, i, data)
+        if data[:type] && e[:type] != data[:type]
+          insert_tags(e, data)
+        elsif data[:type].nil?
+          data[:res] << format("<%s>", e[:type]) if e[:type] != :same
+        end
+        insert_letter(e, i, data)
+      end
+
+      def insert_tags(entry, data)
+        data[:res] << format("</%s>", data[:type]) if data[:type] != :same
+        data[:res] << format("<%s>", entry[:type]) if entry[:type] != :same
+      end
+
+      def insert_letter(entry, index, data)
+        if entry[:type] == :del
+          insert_del(index, data)
+        else
+          insert_others(index, data)
+        end
+        data[:inserts] += 1 if entry[:type] == :ins
+        data[:type] = entry[:type]
+      end
+
+      def insert_del(i, data)
+        data[:res] << data[:str2][i - data[:inserts]]
+        data[:deletes] += 1
+      end
+
+      def insert_others(i, data)
+        data[:res] << data[:str1][i - data[:deletes]]
+      end
     end
   end
 end

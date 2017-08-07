@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
+
 describe DamerauLevenshtein::Differ do
   let(:subject) { DamerauLevenshtein::Differ }
   let(:instance) { subject.new }
@@ -36,11 +38,30 @@ describe DamerauLevenshtein::Differ do
   end
 
   describe "#show" do
-    it "shows difference between two strings using levenshtein algorithm" do
+    it "shows raw difference between two strings" do
       res = [{ distance: 1, type: :subst },
              { distance: 2, type: :subst },
              { distance: 3, type: :subst }]
       expect(instance.show("one", "two")).to eq res
     end
+
+    it "shows tag difference between two strings" do
+      instance.format = :tag
+      res = ["S<subst>om</subst>ethi<ins>n</ins>g",
+             "S<subst>mo</subst>ethi<del>n</del>g"]
+      expect(instance.show("Something", "Smoethig")).to eq res
+      res = ["<del>S</del>ometh<ins>ing</ins>",
+             "<ins>S</ins>ometh<del>ing</del>"]
+      expect(instance.show("omething", "Someth")).to eq res
+      res = ["<del>Somet</del><subst>aaaa</subst>",
+             "<ins>Somet</ins><subst>hing</subst>"]
+      expect(instance.show("aaaa", "Something")).to eq res
+      res = ["<del>Something</del>", "<ins>Something</ins>"]
+      expect(instance.show("", "Something")).to eq res
+      res = ["<ins>Something</ins>", "<del>Something</del>"]
+      expect(instance.show("Something", "")).to eq res
+    end
   end
 end
+
+# rubocop:enable all

@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# rubocop:disable Metrics/BlockLength
+
 describe DamerauLevenshtein do
   describe ".version" do
     it "returns version" do
@@ -63,3 +67,5 @@ describe DamerauLevenshtein do
     end
   end
 end
+
+# rubocop:enable all
