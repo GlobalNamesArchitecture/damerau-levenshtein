@@ -65,7 +65,7 @@ dl.distance("Something", "Smoething", 0) #returns 2
 dl.distance("Something", "meSothing", 2) #returns 2 instead of 4
 ```
 
-* comparison of words with utf-8 characters should work fine:
+* comparison of words with UTF-8 characters should work fine:
 
 ```ruby
 dl.distance("Sjöstedt", "Sjostedt") #returns 1
