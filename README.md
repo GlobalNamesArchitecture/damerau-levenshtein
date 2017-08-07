@@ -14,13 +14,19 @@ Boehmer & Rees 2008 modification of Damerau algorithm, where transposition
 of bigger than 1 character blocks is taken in account as well
 [(Rees 2014)][rees2014].
 
-It also returns a diff between two strings according to Levenshtein alrorithm.
-The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`
-
-
 ```ruby
 require "damerau-levenshtein"
 DamerauLevenshtein.distance("Something", "Smoething") #returns 1
+```
+
+It also returns a diff between two strings according to Levenshtein alrorithm.
+The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`
+
+```ruby
+require "damerau-levenshtein"
+differ = DamerauLevenshtein::Differ.new
+differ.run("corn", "cron")
+# output: ["c<subst>or</subst>n", "c<subst>ro</subst>n"]
 ```
 
 Gem damerau-levenshtein is compatible with ruby versions 1.8.7
