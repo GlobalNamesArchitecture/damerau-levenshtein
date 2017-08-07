@@ -79,14 +79,18 @@ dl.array_distance([1,2,3,5], [1,2,3,4]) #returns 1
 
 * return diff between two strings
 
+```ruby
 differ = DamerauLevenshtein::Differ.new
 differ.run("Something", "smthg")
+```
 
 * return diff between two strings in raw format
 
+```ruby
 differ = DamerauLevenshtein::Differ.new
 differ.format = :raw
 differ.run("Something", "smthg")
+```
 
 ## API Description ##
 
