@@ -205,7 +205,7 @@ This gem is following practices of [Semantic Versioning][semver]
 
 ## Copyright ##
 
-Copyright (c) 2011-2016 Dmitry Mozzherin. See LICENSE.txt for
+Copyright (c) 2011-2017 Dmitry Mozzherin. See LICENSE.txt for
 further details.
 
 [gem_svg]: https://badge.fury.io/rb/damerau-levenshtein.svg
