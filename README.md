@@ -12,11 +12,11 @@ This gem implements pure Levenshtein algorithm, Damerau modification of it
 (where 2 character transposition counts as 1 edit distance). It also includes
 Boehmer & Rees 2008 modification of Damerau algorithm, where transposition
 of bigger than 1 character blocks is taken in account as well
+[(Rees 2014)][rees2014].
 
 It also returns a diff between two strings according to Levenshtein alrorithm.
 The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`
 
-[(Rees 2014)][rees2014].
 
 ```ruby
 require "damerau-levenshtein"
