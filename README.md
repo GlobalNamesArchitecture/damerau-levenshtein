@@ -96,11 +96,14 @@ differ.run("Something", "smthg")
 
 ### Methods ###
 
+#### DamerauLevenshtein.version
+
 ```ruby
 DamerauLevenshtein.version
 #returns version number of the gem
 
-------------------------
+
+#### DamerauLevenshtein.distance
 
 DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
 #returns edit distance between 2 strings
@@ -150,6 +153,8 @@ DamerauLevenshtein.distance("abcdefg", "1234567", 0, 3)
 # output: 4 -- it gave up when edit distance exceeded 3
 
 ```
+
+#### DamerauLevenshtein::Differ
 
 `differ = DamerauLevenshtein::Differ.new` creates an instance of new differ class to return difference between two strings
 
