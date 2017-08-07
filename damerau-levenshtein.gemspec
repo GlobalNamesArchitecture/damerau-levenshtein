@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 
 require "damerau-levenshtein/version"
+
+# rubocop:disable Metrics/BlockLength
 
 Gem::Specification.new do |s|
   s.name = "damerau-levenshtein"
@@ -25,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", "~> 3.5"
   # activesupport >= 5.0 does not support Ruby < 2.2
   s.add_development_dependency "activesupport", "~> 4.2"
+  s.add_development_dependency "byebug", "~> 9.0"
   s.add_development_dependency "cucumber", "~> 2.4"
   s.add_development_dependency "ruby-prof", "~> 0.15"
   s.add_development_dependency "shoulda", "~> 3.5"
@@ -34,3 +39,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake", "~> 11.2"
   s.add_development_dependency "rake-compiler", "~> 1.0"
 end
+
+# rubocop:enable all

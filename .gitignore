@@ -5,6 +5,9 @@ tmp
 *.o
 *.bundle
 *.gem
+.nvimlog
+.vim.custom
+
 # rcov generated
 coverage
 

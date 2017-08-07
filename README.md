@@ -19,6 +19,16 @@ require "damerau-levenshtein"
 DamerauLevenshtein.distance("Something", "Smoething") #returns 1
 ```
 
+It also returns a diff between two strings according to Levenshtein alrorithm.
+The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`
+
+```ruby
+require "damerau-levenshtein"
+differ = DamerauLevenshtein::Differ.new
+differ.run("corn", "cron")
+# output: ["c<subst>or</subst>n", "c<subst>ro</subst>n"]
+```
+
 Gem damerau-levenshtein is compatible with ruby versions 1.8.7
 and 1.9.2 and higher, as well as 2.0.0 and higher
 
@@ -67,14 +77,35 @@ dl.distance("Sjöstedt", "Sjostedt") #returns 1
 dl.array_distance([1,2,3,5], [1,2,3,4]) #returns 1
 ```
 
+* return diff between two strings
+
+```ruby
+differ = DamerauLevenshtein::Differ.new
+differ.run("Something", "smthg")
+```
+
+* return diff between two strings in raw format
+
+```ruby
+differ = DamerauLevenshtein::Differ.new
+differ.format = :raw
+differ.run("Something", "smthg")
+```
+
 ## API Description ##
 
 ### Methods ###
 
+#### DamerauLevenshtein.version
+
 ```ruby
 DamerauLevenshtein.version
 #returns version number of the gem
+```
 
+#### DamerauLevenshtein.distance
+
+```ruby
 DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
 #returns edit distance between 2 strings
 
@@ -124,6 +155,27 @@ DamerauLevenshtein.distance("abcdefg", "1234567", 0, 3)
 
 ```
 
+#### DamerauLevenshtein::Differ
+
+`differ = DamerauLevenshtein::Differ.new` creates an instance of new differ class to return difference between two strings
+
+`differ.format` shows current format for diff. Default is `:tag` format
+
+`differ.format = :raw` changes current format for diffs. Possible values are `:tag` and `:raw`
+
+`differ.run("String1", "String2")` returns difference between two strings.
+
+For example:
+
+```ruby
+differ = DamerauLevenshtein::Differ.new
+differ.run("Something", "smthng")
+# output: ["<ins>S</ins><subst>o</subst>m<ins>e</ins>th<ins>i</ins>ng",
+#          "<del>S</del><subst>s</subst>m<del>e</del>th<del>i</del>ng"]
+
+```
+
+
 ## Contributing to damerau-levenshtein ##
 
 * Check out the latest master to make sure the feature hasn't been
@@ -153,7 +205,7 @@ This gem is following practices of [Semantic Versioning][semver]
 
 ## Copyright ##
 
-Copyright (c) 2011-2016 Dmitry Mozzherin. See LICENSE.txt for
+Copyright (c) 2011-2017 Dmitry Mozzherin. See LICENSE.txt for
 further details.
 
 [gem_svg]: https://badge.fury.io/rb/damerau-levenshtein.svg
