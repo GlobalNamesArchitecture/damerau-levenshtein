@@ -101,10 +101,11 @@ differ.run("Something", "smthg")
 ```ruby
 DamerauLevenshtein.version
 #returns version number of the gem
-
+```
 
 #### DamerauLevenshtein.distance
 
+```ruby
 DamerauLevenshtein.distance(string1, string2, block_size, max_distance)
 #returns edit distance between 2 strings
 
