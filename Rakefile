@@ -25,3 +25,8 @@ Rake::Task[:features].prerequisites << :compile
 
 RuboCop::RakeTask.new
 task default: %i[rubocop spec]
+
+desc "open an irb session preloaded with this gem"
+task :console do
+  sh "irb -r pp -r ./lib/damerau-levenshtein.rb"
+end

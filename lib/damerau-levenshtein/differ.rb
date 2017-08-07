@@ -8,7 +8,7 @@ module DamerauLevenshtein
     attr_accessor :format
 
     def initialize
-      @format = :raw
+      @format = :tag
       @matrix = []
     end
 
@@ -17,7 +17,7 @@ module DamerauLevenshtein
       @format = new_format if FORMATS.include?(new_format)
     end
 
-    def show(str1, str2)
+    def run(str1, str2)
       @len1 = str1.size.freeze
       @len2 = str2.size.freeze
       prepare_matrix

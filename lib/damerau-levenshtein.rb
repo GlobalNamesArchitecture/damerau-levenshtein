@@ -1,10 +1,10 @@
 # encoding: UTF-8
 # frozen_string_literal: true
 
-require "damerau-levenshtein/version"
-require "damerau-levenshtein/damerau_levenshtein"
-require "damerau-levenshtein/formatter"
-require "damerau-levenshtein/differ"
+require_relative "damerau-levenshtein/version"
+require_relative "damerau-levenshtein/damerau_levenshtein"
+require_relative "damerau-levenshtein/formatter"
+require_relative "damerau-levenshtein/differ"
 
 # Damerau-Levenshtein algorithm
 module DamerauLevenshtein

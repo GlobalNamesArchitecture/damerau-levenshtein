@@ -12,6 +12,10 @@ This gem implements pure Levenshtein algorithm, Damerau modification of it
 (where 2 character transposition counts as 1 edit distance). It also includes
 Boehmer & Rees 2008 modification of Damerau algorithm, where transposition
 of bigger than 1 character blocks is taken in account as well
+
+It also returns a diff between two strings according to Levenshtein alrorithm.
+The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`
+
 [(Rees 2014)][rees2014].
 
 ```ruby
@@ -66,6 +70,17 @@ dl.distance("Sjöstedt", "Sjostedt") #returns 1
 ```ruby
 dl.array_distance([1,2,3,5], [1,2,3,4]) #returns 1
 ```
+
+* return diff between two strings
+
+differ = DamerauLevenshtein::Differ.new
+differ.run("Something", "smthg")
+
+* return diff between two strings in raw format
+
+differ = DamerauLevenshtein::Differ.new
+differ.format = :raw
+differ.run("Something", "smthg")
 
 ## API Description ##
 
@@ -123,6 +138,25 @@ DamerauLevenshtein.distance("abcdefg", "1234567", 0, 3)
 # output: 4 -- it gave up when edit distance exceeded 3
 
 ```
+
+`differ = DamerauLevenshtein::Differ.new` creates an instance of new differ class to return difference between two strings
+
+`differ.format` shows current format for diff. Default is `:tag` format
+
+`differ.format = :raw` changes current format for diffs. Possible values are `:tag` and `:raw`
+
+`differ.run("String1", "String2")` returns difference between two strings.
+
+For example:
+
+```ruby
+differ = DamerauLevenshtein::Differ.new
+differ.run("Something", "smthng")
+# output: ["<ins>S</ins><subst>o</subst>m<ins>e</ins>th<ins>i</ins>ng",
+#          "<del>S</del><subst>s</subst>m<del>e</del>th<del>i</del>ng"]
+
+```
+
 
 ## Contributing to damerau-levenshtein ##
 
