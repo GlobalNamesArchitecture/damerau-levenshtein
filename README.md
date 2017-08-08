@@ -175,6 +175,31 @@ differ.run("Something", "smthng")
 
 ```
 
+Or with parsing:
+
+```ruby
+require "damerau-levenshtein"
+require "nokogiri"
+
+differ = DamerauLevenshtein::Differ.new
+res = differ.run("Something", "Smothing!")
+nodes = Nokogiri::XML("<root>#{res.first}</root>")
+
+markup = nodes.root.children.map do |n|
+  case n.name
+  when "text"
+    n.text
+  when "del"
+    "~~#{n.children.first.text}~~"
+  when "ins"
+    "*#{n.children.first.text}*"
+  when "subst"
+    "**#{n.children.first.text}**"
+  end
+end.join("")
+
+puts markup
+```
 
 ## Contributing to damerau-levenshtein ##
 
