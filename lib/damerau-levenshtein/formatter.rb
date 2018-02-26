@@ -50,7 +50,7 @@ module DamerauLevenshtein
         raw.each_with_index do |e, i|
           process_entry(e, i, data)
         end
-        data[:res] << format("</%s>", data[:type]) if data[:type] != :same
+        data[:res] << format("</%<type>s>", data) if data[:type] != :same
         data[:res].join("")
       end
 
@@ -58,14 +58,14 @@ module DamerauLevenshtein
         if data[:type] && e[:type] != data[:type]
           insert_tags(e, data)
         elsif data[:type].nil?
-          data[:res] << format("<%s>", e[:type]) if e[:type] != :same
+          data[:res] << format("<%<type>s>", e) if e[:type] != :same
         end
         insert_letter(e, i, data)
       end
 
       def insert_tags(entry, data)
-        data[:res] << format("</%s>", data[:type]) if data[:type] != :same
-        data[:res] << format("<%s>", entry[:type]) if entry[:type] != :same
+        data[:res] << format("</%<type>s>", data) if data[:type] != :same
+        data[:res] << format("<%<type>s>", entry) if entry[:type] != :same
       end
 
       def insert_letter(entry, index, data)

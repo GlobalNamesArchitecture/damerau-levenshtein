@@ -5,7 +5,7 @@ module DamerauLevenshtein
   # resolution
   class Differ
     FORMATS = %i[raw tag].freeze
-    attr_accessor :format
+    attr_reader :format
 
     def initialize
       @format = :tag

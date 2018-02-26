@@ -7,6 +7,7 @@ require "damerau-levenshtein/version"
 # rubocop:disable Metrics/BlockLength
 
 Gem::Specification.new do |s|
+  s.required_ruby_version = "~> 2.3"
   s.name = "damerau-levenshtein"
   s.version = DamerauLevenshtein::VERSION
   s.homepage = "https://github.com/GlobalNamesArchitecture/damerau-levenshtein"
@@ -26,18 +27,18 @@ Gem::Specification.new do |s|
   s.extensions = ["ext/damerau_levenshtein/extconf.rb"]
   s.require_paths = ["lib", "lib/damerau-levenshtein"]
 
-  s.add_development_dependency "rspec", "~> 3.5"
+  s.add_development_dependency "rspec", "~> 3.7"
   # activesupport >= 5.0 does not support Ruby < 2.2
-  s.add_development_dependency "activesupport", "~> 4.2"
+  s.add_development_dependency "activesupport", "~> 5.1"
+  s.add_development_dependency "bundler", "~> 1.16"
   s.add_development_dependency "byebug", "~> 9.0"
-  s.add_development_dependency "cucumber", "~> 2.4"
-  s.add_development_dependency "ruby-prof", "~> 0.15"
-  s.add_development_dependency "shoulda", "~> 3.5"
-  s.add_development_dependency "rubocop", "~> 0.41"
   s.add_development_dependency "coveralls", "~> 0.8"
-  s.add_development_dependency "bundler", "~> 1.11"
-  s.add_development_dependency "rake", "~> 11.2"
+  s.add_development_dependency "cucumber", "~> 3.1"
+  s.add_development_dependency "rake", "~> 12.3"
   s.add_development_dependency "rake-compiler", "~> 1.0"
+  s.add_development_dependency "rubocop", "~> 0.52"
+  s.add_development_dependency "ruby-prof", "~> 0.17"
+  s.add_development_dependency "shoulda", "~> 3.5"
 end
 
 # rubocop:enable all
