@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   # activesupport >= 5.0 does not support Ruby < 2.2
   s.add_development_dependency "activesupport", "~> 5.1"
   s.add_development_dependency "bundler", "~> 1.16"
-  s.add_development_dependency "byebug", "~> 9.0"
+  s.add_development_dependency "byebug", "~> 10.0"
   s.add_development_dependency "coveralls", "~> 0.8"
   s.add_development_dependency "cucumber", "~> 3.1"
   s.add_development_dependency "rake", "~> 12.3"
