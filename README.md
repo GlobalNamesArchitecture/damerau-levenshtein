@@ -226,7 +226,7 @@ This gem is following practices of [Semantic Versioning][semver]
 
 ## Contributors ##
 
-[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti], [azhi][azhi]
+[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti], [azhi][azhi], [Josephine Wright][jozr]
 
 ## Copyright ##
 
