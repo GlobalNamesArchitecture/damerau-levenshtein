@@ -226,11 +226,11 @@ This gem is following practices of [Semantic Versioning][semver]
 
 ## Contributors ##
 
-[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti], [azhi][azhi]
+[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti], [azhi][azhi], [Josephine Wright][jozr]
 
 ## Copyright ##
 
-Copyright (c) 2011-2017 Dmitry Mozzherin. See LICENSE.txt for
+Copyright (c) 2011-2018 Dmitry Mozzherin. See LICENSE.txt for
 further details.
 
 [gem_svg]: https://badge.fury.io/rb/damerau-levenshtein.svg

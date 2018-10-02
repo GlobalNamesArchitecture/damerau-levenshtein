@@ -9,7 +9,7 @@ Metrics/ModuleLength:
   Max: 1000
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-Style/DotPosition:
+Layout/DotPosition:
   EnforcedStyle: trailing
-Style/FileName:
+Naming/FileName:
   Enabled: false
