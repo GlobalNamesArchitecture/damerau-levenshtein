@@ -248,4 +248,5 @@ further details.
 [skarlit]: https://github.com/Skarlit
 [ixti]: https://github.com/ixti
 [azhi]: https://github.com/azhi
+[jozr]: https://github.com/jozr
 [rees2014]: https://dx.doi.org/10.1371/journal.pone.0107510
