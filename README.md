@@ -20,7 +20,8 @@ DamerauLevenshtein.distance("Something", "Smoething") #returns 1
 ```
 
 It also returns a diff between two strings according to Levenshtein alrorithm.
-The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`
+The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`. Such tags make
+it possible to highlight differnce between strings in a flexible way.
 
 ```ruby
 require "damerau-levenshtein"
