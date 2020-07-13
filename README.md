@@ -224,7 +224,12 @@ This gem is following practices of [Semantic Versioning][semver]
 
 ## Contributors ##
 
-[lazylester][lazylester], [Ran Xie][skarlit], [Alexey Zapparov][ixti], [azhi][azhi], [Josephine Wright][jozr]
+[Alexey Zapparov][ixti],
+[azhi][azhi],
+[Fabian Winkler][wynksaiddestroy]
+[Josephine Wright][jozr],
+[lazylester][lazylester],
+[Ran Xie][skarlit],
 
 ## Copyright ##
 
@@ -248,3 +253,4 @@ further details.
 [azhi]: https://github.com/azhi
 [jozr]: https://github.com/jozr
 [rees2014]: https://dx.doi.org/10.1371/journal.pone.0107510
+[wynksaiddestroy]: https://github.com/wynksaiddestroy
