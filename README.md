@@ -199,6 +199,11 @@ end.join("")
 puts markup
 ```
 
+Output
+```
+S*o*m**e**thing~~!~~
+```
+
 ## Contributing to damerau-levenshtein ##
 
 * Check out the latest master to make sure the feature hasn't been
