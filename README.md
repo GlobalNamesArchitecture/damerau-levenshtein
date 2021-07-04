@@ -18,7 +18,6 @@ of bigger than 1 character blocks is taken in account as well
 require "damerau-levenshtein"
 DamerauLevenshtein.distance("Something", "Smoething") #returns 1
 ```
-
 It also returns a diff between two strings according to Levenshtein alrorithm.
 The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`. Such tags make
 it possible to highlight differnce between strings in a flexible way.
@@ -267,4 +266,5 @@ further details.
 [azhi]: https://github.com/azhi
 [jozr]: https://github.com/jozr
 [rees2014]: https://dx.doi.org/10.1371/journal.pone.0107510
+[Nakilon]: https://github.com/Nakilon
 [wynksaiddestroy]: https://github.com/wynksaiddestroy
