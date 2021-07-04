@@ -30,15 +30,19 @@ differ.run("corn", "cron")
 # output: ["c<subst>or</subst>n", "c<subst>ro</subst>n"]
 ```
 
-## Dependencies ##
+## Dependencies
 
-    sudo apt-get install build-essential libgmp3-dev
+```bash
+sudo apt-get install build-essential libgmp3-dev
+```
 
-## Installation ##
+## Installation
 
-    gem install damerau-levenshtein
+```bash
+gem install damerau-levenshtein
+```
 
-## Examples ##
+## Examples
 
 ```ruby
 require "damerau-levenshtein"
@@ -90,9 +94,9 @@ differ.format = :raw
 differ.run("Something", "smthg")
 ```
 
-## API Description ##
+## API Description
 
-### Methods ###
+### Methods
 
 #### DamerauLevenshtein.version
 
@@ -123,25 +127,27 @@ DamerauLevenshtein.array_distance(array1, array2, block_size, max_distance)
 
 `block_size` determines maximum number of characters in a transposition block:
 
-    block_size = 0
-    (transposition does not count -- it is a pure Levenshtein algorithm)
+```bash
+block_size = 0
+(transposition does not count -- it is a pure Levenshtein algorithm)
 
-    block_size = 1
-    (transposition between 2 adjustent characters --
-    it is pure Damerau-Levenshtein algorithm)
+block_size = 1
+(transposition between 2 adjustent characters --
+it is pure Damerau-Levenshtein algorithm)
 
-    block_size = 2
-    (transposition between blocks as big as 2 characters -- so abcd and cdab
-    counts as edit distance 2, not 4)
+block_size = 2
+(transposition between blocks as big as 2 characters -- so abcd and cdab
+counts as edit distance 2, not 4)
 
-    block_size = 3
-    (transposition between blocks as big as 3 characters --
-    so abcdef and defabc counts as edit distance 3, not 6)
+block_size = 3
+(transposition between blocks as big as 3 characters --
+so abcdef and defabc counts as edit distance 3, not 6)
 
-    etc.
+etc.
+```
 
 `max_distance` -- is a threshold after which algorithm gives up and
-returns max_distance instead of real edit distance.
+returns `max_distance` instead of real edit distance.
 
 Levenshtein algorithm is expensive, so it makes sense to give up when edit
 distance is becoming too big. The argument max_distance does just that.
@@ -155,11 +161,13 @@ DamerauLevenshtein.distance("abcdefg", "1234567", 0, 3)
 
 #### DamerauLevenshtein::Differ
 
-`differ = DamerauLevenshtein::Differ.new` creates an instance of new differ class to return difference between two strings
+`differ = DamerauLevenshtein::Differ.new` creates an instance of new differ
+class to return difference between two strings
 
 `differ.format` shows current format for diff. Default is `:tag` format
 
-`differ.format = :raw` changes current format for diffs. Possible values are `:tag` and `:raw`
+`differ.format = :raw` changes current format for diffs. Possible values
+are `:tag` and `:raw`
 
 `differ.run("String1", "String2")` returns difference between two strings.
 
@@ -204,7 +212,7 @@ Output
 S*o*m**e**thing~~!~~
 ```
 
-## Contributing to damerau-levenshtein ##
+## Contributing to damerau-levenshtein
 
 * Check out the latest master to make sure the feature hasn't been
   implemented or the bug hasn't been fixed yet
@@ -219,15 +227,15 @@ S*o*m**e**thing~~!~~
   to have your own version, or is otherwise necessary, that is fine, but please
   isolate to its own commit so I can cherry-pick around it.
 
-## Versioning ##
+## Versioning
 
 This gem is following practices of [Semantic Versioning][semver]
 
-## Authors ##
+## Authors
 
 [Dmitry Mozzherin][dimus]
 
-## Contributors ##
+## Contributors
 
 [Alexey Zapparov][ixti],
 [azhi][azhi],
@@ -235,8 +243,9 @@ This gem is following practices of [Semantic Versioning][semver]
 [Josephine Wright][jozr],
 [lazylester][lazylester],
 [Ran Xie][skarlit],
+[Victor Maslov][Nakilon]
 
-## Copyright ##
+## Copyright
 
 Copyright (c) 2011-2019 Dmitry Mozzherin. See LICENSE.txt for
 further details.
