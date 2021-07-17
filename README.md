@@ -1,5 +1,6 @@
-# damerau-levenshtein #
+# damerau-levenshtein
 
+[![DOI](https://zenodo.org/badge/2085407.svg)](https://zenodo.org/badge/latestdoi/2085407)
 [![Gem Version][gem_svg]][gem]
 [![Continuous Integration Status][ci_svg]][ci]
 [![Dependency Status][dep_svg]][dep]
@@ -18,6 +19,7 @@ of bigger than 1 character blocks is taken in account as well
 require "damerau-levenshtein"
 DamerauLevenshtein.distance("Something", "Smoething") #returns 1
 ```
+
 It also returns a diff between two strings according to Levenshtein alrorithm.
 The diff is expressed by tags `<ins>`, `<del>`, and `<subst>`. Such tags make
 it possible to highlight differnce between strings in a flexible way.
@@ -207,7 +209,8 @@ puts markup
 ```
 
 Output
-```
+
+```text
 S*o*m**e**thing~~!~~
 ```
 
