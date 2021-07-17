@@ -3,7 +3,6 @@
 [![DOI](https://zenodo.org/badge/2085407.svg)](https://zenodo.org/badge/latestdoi/2085407)
 [![Gem Version][gem_svg]][gem]
 [![Continuous Integration Status][ci_svg]][ci]
-[![Dependency Status][dep_svg]][dep]
 [![Coverage Status][cov_svg]][cov]
 
 The damerau-levenshtein gem allows to find [edit distance][ed] between two
@@ -257,7 +256,6 @@ further details.
 [ci_svg]: https://secure.travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein.svg
 [ci]: http://travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein
 [dep_svg]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein.svg
-[dep]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein
 [cov_svg]: https://coveralls.io/repos/GlobalNamesArchitecture/damerau-levenshtein/badge.svg?branch=master
 [cov]: https://coveralls.io/r/GlobalNamesArchitecture/damerau-levenshtein?branch=master
 [ed]: http://en.wikipedia.org/wiki/Edit_distance
