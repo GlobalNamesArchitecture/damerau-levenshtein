@@ -244,7 +244,8 @@ This gem is following practices of [Semantic Versioning][semver]
 [Josephine Wright][jozr],
 [lazylester][lazylester],
 [Ran Xie][skarlit],
-[Victor Maslov][Nakilon]
+[Victor Maslov][Nakilon],
+[Masafumi Koba][ybiquitous]
 
 ## Copyright
 
@@ -269,3 +270,4 @@ further details.
 [rees2014]: https://dx.doi.org/10.1371/journal.pone.0107510
 [Nakilon]: https://github.com/Nakilon
 [wynksaiddestroy]: https://github.com/wynksaiddestroy
+[ybiquitous]: https://github.com/ybiquitous
