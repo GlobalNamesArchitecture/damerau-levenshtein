@@ -253,8 +253,8 @@ further details.
 
 [gem_svg]: https://badge.fury.io/rb/damerau-levenshtein.svg
 [gem]: http://badge.fury.io/rb/damerau-levenshtein
-[ci_svg]: https://secure.travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein.svg
-[ci]: http://travis-ci.org/GlobalNamesArchitecture/damerau-levenshtein
+[ci_svg]: https://github.com/GlobalNamesArchitecture/damerau-levenshtein/actions/workflows/ci.yml/badge.svg
+[ci]: https://github.com/GlobalNamesArchitecture/damerau-levenshtein/actions/workflows/ci.yml
 [dep_svg]: https://gemnasium.com/GlobalNamesArchitecture/damerau-levenshtein.svg
 [cov_svg]: https://coveralls.io/repos/GlobalNamesArchitecture/damerau-levenshtein/badge.svg?branch=master
 [cov]: https://coveralls.io/r/GlobalNamesArchitecture/damerau-levenshtein?branch=master
