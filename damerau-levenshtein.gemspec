@@ -5,7 +5,7 @@ $LOAD_PATH.push File.expand_path("lib", __dir__)
 require "damerau-levenshtein/version"
 
 Gem::Specification.new do |s|
-  s.required_ruby_version = ">= 2.4"
+  s.required_ruby_version = ">= 2.7"
   s.name = "damerau-levenshtein"
   s.version = DamerauLevenshtein::VERSION
   s.homepage = "https://github.com/GlobalNamesArchitecture/damerau-levenshtein"
@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake", "~> 13.0"
   s.add_development_dependency "rake-compiler", "~> 1.1"
   s.add_development_dependency "rspec", "~> 3.9"
-  s.add_development_dependency "rubocop", "~> 0.88"
+  s.add_development_dependency "rubocop", "~> 1.65.1"
   s.add_development_dependency "ruby-prof", "~> 1.4"
   s.add_development_dependency "shoulda", "~> 4.0"
   s.add_development_dependency "solargraph", "~> 0.39"
