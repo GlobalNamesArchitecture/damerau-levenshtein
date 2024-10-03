@@ -25,15 +25,15 @@ Gem::Specification.new do |s|
   s.extensions = ["ext/damerau_levenshtein/extconf.rb"]
   s.require_paths = ["lib", "lib/damerau-levenshtein"]
 
-  s.add_development_dependency "bundler", "~> 2.1"
-  s.add_development_dependency "byebug", "~> 11.0"
+  s.add_development_dependency "bundler", "~> 2.5"
+  s.add_development_dependency "byebug", "~> 11.1"
   s.add_development_dependency "coveralls", "~> 0.8"
-  s.add_development_dependency "cucumber", "~> 4.1"
-  s.add_development_dependency "rake", "~> 13.0"
-  s.add_development_dependency "rake-compiler", "~> 1.1"
-  s.add_development_dependency "rspec", "~> 3.9"
-  s.add_development_dependency "rubocop", "~> 0.88"
-  s.add_development_dependency "ruby-prof", "~> 1.4"
+  s.add_development_dependency "cucumber", "~> 9.2"
+  s.add_development_dependency "rake", "~> 13.2"
+  s.add_development_dependency "rake-compiler", "~> 1.2"
+  s.add_development_dependency "rspec", "~> 3.13"
+  s.add_development_dependency "rubocop", "~> 1.66"
+  s.add_development_dependency "ruby-prof", "~> 1.7"
   s.add_development_dependency "shoulda", "~> 4.0"
-  s.add_development_dependency "solargraph", "~> 0.39"
+  s.add_development_dependency "solargraph", "~> 0.50"
 end
